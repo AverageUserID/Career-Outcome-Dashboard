@@ -7,7 +7,7 @@ from pathlib import Path
 st.set_page_config(page_title="Career Outcome", layout="wide")
 st.sidebar.markdown("### Data source")
 st.sidebar.markdown(
-    "- IPEDS Completions (CIP): [NCES IPEDS Data Center](https://nces.ed.gov/ipeds/use-the-data")
+    "- Career outcomes / salary:: [https://www.naceweb.org/job-market/graduate-outcomes/first-destination/class-of-2024/first-destinations-for-the-college-class-of-2024-interactive-dashboard/)
 # -----------------------------
 # Load data
 # -----------------------------
