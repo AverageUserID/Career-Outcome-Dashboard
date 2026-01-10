@@ -6,7 +6,7 @@ from pathlib import Path
 st.title("Degree Conferred")
 st.sidebar.markdown("### Data source")
 st.sidebar.markdown(
-    "- IPEDS Completions (CIP): [NCES IPEDS Data Center](https://nces.ed.gov/ipeds/use-the-data")
+    "- IPEDS Completions (CIP): [NCES IPEDS Data Center](https://nces.ed.gov/ipeds/use-the-data)")
 # -----------------------------
 # Load data
 # -----------------------------
