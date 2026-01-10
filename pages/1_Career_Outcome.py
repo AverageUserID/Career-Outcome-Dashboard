@@ -5,7 +5,9 @@ from pathlib import Path
 
 # ✅ Sets the browser tab + sidebar app name
 st.set_page_config(page_title="Career Outcome", layout="wide")
-
+st.sidebar.markdown("### Data source")
+st.sidebar.markdown(
+    "- IPEDS Completions (CIP): [NCES IPEDS Data Center](https://nces.ed.gov/ipeds/use-the-data")
 # -----------------------------
 # Load data
 # -----------------------------
