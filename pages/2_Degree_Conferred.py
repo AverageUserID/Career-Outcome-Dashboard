@@ -47,7 +47,13 @@ df["level"] = (
 df["total"] = pd.to_numeric(df["total"], errors="coerce")
 if has_pct:
     df["pct_change"] = pd.to_numeric(df["pct_change"], errors="coerce")
-
+mapping ={
+        '13': 'Education (13)',
+        '13.1306': 'Foreign Language Teacher Education (13.1306)',
+        '16': 'Foreign Languages, Literatures, and Linguistics (16)',
+        '16.0905': 'Spanish Languages and Literatures (16.0905)',
+        '30.52': 'Digital Humanities (30.52)'
+}
 # -----------------------------
 # Sidebar filters
 # -----------------------------
@@ -57,7 +63,7 @@ with st.sidebar:
     cip_options = sorted(df["cip"].unique().tolist())
     selected_cips = st.multiselect(
         "CIP code(s)",
-        options=cip_options,
+        options=cip_options(mapping.keys()),
         default=cip_options[:1]
     )
 
