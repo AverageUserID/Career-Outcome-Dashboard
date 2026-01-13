@@ -61,13 +61,14 @@ with st.sidebar:
     st.header("Filters")
 
     cip_options = sorted(df["cip"].unique().tolist())
+
     selected_cips = st.multiselect(
         "CIP code(s)",
-        options=cip_options(mapping.keys()),
-        default=cip_options[:1]
+        options=cip_options,
+        default=cip_options[:1],
+        format_func=lambda x: mapping.get(x, x)
     )
 
-    # Detect DH selection
     dh_selected = ("30.52" in selected_cips)
 
     # Degree options
